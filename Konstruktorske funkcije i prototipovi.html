@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konstruktorske funkcije i prototipovi</title>
+</head>
+<body>
+    <script>
+
+        function Student(name, address, phone, course) {
+            this.name = name;
+            this.address = address;
+            this.phone = phone;
+            this.course = course;
+
+            this.getInfo = function() {
+                return "name: " + this.name + "\n" +
+                "address: " + this.address + "\n" +
+                "phone: " + this.phone + "\n" +
+                "course: " + this.course;
+            }
+        }
+
+
+            let student1 = new Student("John Doe", "123 Main St, Anytown USA", "555-1234", "JavaScript");
+            let student2 = new Student("Jane Smith", "456 Oak Rd, Somewhere City", "555-5678", "Python");
+            let student3 = new Student("Bob Johnson", "789 Elm St, Nowhere Town", "555-9012", "Java");
+
+            console.log(student1.getInfo());
+            console.log(student2.getInfo());
+            console.log(student3.getInfo());
+
+    </script>
+</body>
+</html>
